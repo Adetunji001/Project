@@ -11,18 +11,18 @@
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="" name="Jolayemi Olugbenga David(sky-hackeR)" />
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{asset('admin_assets/images/favicon.ico')}}">
+    <link rel="shortcut icon" href="{{asset('assets/images/favicon.ico')}}">
 
     <!-- Layout config Js -->
-    <script src="{{asset('admin_assets/js/layout.js')}}"></script>
+    <script src="{{asset('assets/js/layout.js')}}"></script>
     <!-- Bootstrap Css -->
-    <link href="{{asset('admin_assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
     <!-- Icons Css -->
-    <link href="{{asset('admin_assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
     <!-- App Css-->
-    <link href="{{asset('admin_assets/css/app.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('assets/css/app.min.css')}}" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
-    <link href="{{asset('admin_assets/css/custom.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('assets/css/custom.min.css')}}" rel="stylesheet" type="text/css" />
 
     <!-- Scripts -->
     <script>
@@ -55,7 +55,7 @@
                         <div class="text-center mt-sm-5 mb-4 text-white-50">
                             <div>
                                 <a href="index.html" class="d-inline-block auth-logo">
-                                    <img src="{{asset('admin_assets/images/logo-light.png')}}" alt="" height="20">
+                                    <img src="{{asset('assets/images/logo-light.png')}}" alt="" height="20">
                                 </a>
                             </div>
                             <p class="mt-3 fs-15 fw-medium">{{env('APP_NAME')}} | {{env('APP_DESCRIPTION')}}</p>
@@ -91,19 +91,19 @@
     <!-- end auth-page-wrapper -->
 
     <!-- JAVASCRIPT -->
-    <script src="{{asset('admin_assets/libs/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{asset('admin_assets/libs/simplebar/simplebar.min.js')}}"></script>
-    <script src="{{asset('admin_assets/libs/node-waves/waves.min.js')}}"></script>
-    <script src="{{asset('admin_assets/libs/feather-icons/feather.min.js')}}"></script>
-    <script src="{{asset('admin_assets/js/pages/plugins/lord-icon-2.1.0.js')}}"></script>
-    <script src="{{asset('admin_assets/js/plugins.js')}}"></script>
+    <script src="{{asset('assets/libs/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('assets/libs/simplebar/simplebar.min.js')}}"></script>
+    <script src="{{asset('assets/libs/node-waves/waves.min.js')}}"></script>
+    <script src="{{asset('assets/libs/feather-icons/feather.min.js')}}"></script>
+    <script src="{{asset('assets/js/pages/plugins/lord-icon-2.1.0.js')}}"></script>
+    <script src="{{asset('assets/js/plugins.js')}}"></script>
 
     <!-- particles js -->
-    <script src="{{asset('admin_assets/libs/particles.js/particles.js')}}"></script>
+    <script src="{{asset('assets/libs/particles.js/particles.js')}}"></script>
     <!-- particles app js -->
-    <script src="{{asset('admin_assets/js/pages/particles.app.js')}}"></script>
+    <script src="{{asset('assets/js/pages/particles.app.js')}}"></script>
     <!-- password-addon init -->
-    <script src="{{asset('admin_assets/js/pages/password-addon.init.js')}}"></script>
+    <script src="{{asset('assets/js/pages/password-addon.init.js')}}"></script>
 </body>
 </html>
 
