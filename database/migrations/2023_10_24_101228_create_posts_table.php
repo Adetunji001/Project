@@ -20,6 +20,7 @@ class CreatePostsTable extends Migration
             $table->string('title')->nullable();
             $table->text('description')->nullable();
             $table->text('post_body')->nullable();
+            $table->text('post')->nullable();
             $table->string('slug')->nullable();
             $table->timestamps();
             $table-> softDeletes();

@@ -440,8 +440,8 @@
                         <li class="menu-title"><i class="ri-more-fill"></i> <span data-key="t-components">Components</span></li>
 
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="{{url ('admin/categories')}}">
-                                <i class="ri-honour-line"></i> <span data-key="t-categories">Category</span>
+                            <a class="nav-link menu-link" href="{{url ('admin/category')}}">
+                                <i class="ri-honour-line"></i> <span data-key="t-category">Category</span>
                             </a>
                         </li>
 
@@ -470,6 +470,13 @@
                                 <i class="ri-honour-line"></i> <span data-key="t-users">Users</span>
                             </a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="{{url ('admin/todo')}}">
+                                <i class="ri-honour-line"></i> <span data-key="t-breakingnews">Todo</span>
+                            </a>
+                        </li>
+
 
 
                         <li class="nav-item">

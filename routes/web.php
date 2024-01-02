@@ -37,6 +37,13 @@ Route::group(['prefix' => 'admin'], function () {
   Route::post('/login', [App\Http\Controllers\Admin\Auth\LoginController::class, 'login']);
   Route::post('/logout', [App\Http\Controllers\Admin\Auth\LoginController::class, 'logout'])->name('logout');
 
+  Route::get('/', [App\Http\Controllers\Admin\Auth\RegisterController::class, 'showRegisterForm'])->name('admin.register');
+  Route::get('/register', [App\Http\Controllers\Admin\Auth\RegisterController::class, 'showRegisterForm'])->name('register');
+  Route::post('/register', [App\Http\Controllers\Admin\Auth\RegisterController::class, 'register']);
+
+
+  
+
   // Route::get('/register', [App\Http\Controllers\Admin\Auth\RegisterController::class, 'showRegistrationForm'])->name('register');
   // Route::post('/register', [App\Http\Controllers\Admin\Auth\RegisterController::class, 'register']);
 
@@ -46,12 +53,55 @@ Route::group(['prefix' => 'admin'], function () {
   Route::get('/password/reset/{token}', [App\Http\Controllers\Admin\Auth\ResetPasswordController::class, 'showResetForm']);
   
   Route::get('/home', [App\Http\Controllers\Admin\HomeController::class, 'home'])->name('home')->middleware(['auth:admin']);
-  Route::get('/categories', [App\Http\Controllers\Admin\HomeController::class, 'categories'])->name('categories');
-  Route::get('/blogposts', [App\Http\Controllers\Admin\HomeController::class, 'blogposts'])->name('blogposts');
+  // Route::get('/blogposts', [App\Http\Controllers\Admin\HomeController::class, 'blogposts'])->name('blogposts');
   Route::get('/breakingnews', [App\Http\Controllers\Admin\HomeController::class, 'breakingnews'])->name('breakingnews');
   Route::get('/newsletter', [App\Http\Controllers\User\UserController::class, 'newsletter'])->name('newsletter');
   Route::get('/users', [App\Http\Controllers\User\UserController::class, 'users'])->name('users');
   Route::get('/logout', [App\Http\Controllers\User\UserController::class, 'logout'])->name('logout');
+
+
+  Route::get('/home', [App\Http\Controllers\Admin\HomeController::class, 'home'])->name('admin.home');
+
+  Route::get('/category', [App\Http\Controllers\Admin\HomeController::class,'categories'])->name('admin.category');
+  Route::post('/addCategory', [App\Http\Controllers\Admin\HomeController::class,'addCategory'])->name('admin.addCategory');
+  Route::post('/updateCategory', [App\Http\Controllers\Admin\HomeController::class,'updateCategory'])->name('admin.updateCategory');
+  Route::post('/deleteCategory', [App\Http\Controllers\Admin\HomeController::class,'deleteCategory'])->name('admin.deleteCategory');
+
+  Route::get('/todo', [App\Http\Controllers\Admin\HomeController::class,'todo'])->name('admin.todo');
+  Route::post('/addTodo', [App\Http\Controllers\Admin\HomeController::class,'addTodo'])->name('admin.addTodo');
+  Route::post('/updateTodo', [App\Http\Controllers\Admin\HomeController::class,'updateTodo'])->name('admin.updateTodo');
+  Route::post('/deleteTodo', [App\Http\Controllers\Admin\HomeController::class,'deleteTodo'])->name('admin.deleteTodo');
+
+
+  Route::get('/blogposts', [App\Http\Controllers\Admin\HomeController::class,'blogposts'])->name('admin.blogposts');
+  Route::post('/addPost', [App\Http\Controllers\Admin\HomeController::class,'addPost'])->name('admin.addPost');
+  Route::post('/updatePost', [App\Http\Controllers\Admin\HomeController::class,'updatePost'])->name('admin.updatePost');
+  Route::post('/deletePost', [App\Http\Controllers\Admin\HomeController::class,'deletePost'])->name('admin.deletePost');
+
+
+
+
+
+  
+
+
+
+  Route::get('/bn', [App\Http\Controllers\Admin\HomeController::class,'bn'])->name('admin.bn');
+  Route::post('/addBN', [App\Http\Controllers\Admin\HomeController::class,'addBN'])->name('admin.addBN');
+
+
+  Route::get('/newsletter', [App\Http\Controllers\Admin\HomeController::class,'newsletter'])->name('admin.newsletter');
+
+  Route::get('/users', [App\Http\Controllers\Admin\HomeController::class,'users'])->name('admin.users');
+
+ 
+
+
+
+  
+
+
+
 });
 
 
@@ -80,6 +130,9 @@ Route::group(['prefix' => 'user'], function () {
   Route::post('/login', [App\Http\Controllers\User\Auth\LoginController::class, 'login']);
   Route::post('/logout', [App\Http\Controllers\User\Auth\LoginController::class, 'logout'])->name('logout');
 
+ 
+
+  Route::get('/', [App\Http\Controllers\User\Auth\RegisterController::class, 'showRegistrationForm'])->name('user.register');
   Route::get('/register', [App\Http\Controllers\User\Auth\RegisterController::class, 'showRegistrationForm'])->name('register');
   Route::post('/register', [App\Http\Controllers\User\Auth\RegisterController::class, 'register']);
 

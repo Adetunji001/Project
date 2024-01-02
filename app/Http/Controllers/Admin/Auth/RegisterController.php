@@ -53,6 +53,8 @@ class RegisterController extends Controller
             'email' => 'required|email|max:255|unique:admins',
             'password' => 'required|min:6|confirmed',
         ]);
+
+        
     }
 
     /**
@@ -68,6 +70,9 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+
+        
+
     }
 
     /**
@@ -75,7 +80,7 @@ class RegisterController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function showRegistrationForm()
+    public function showRegisterForm()
     {
         return view('admin.auth.register');
     }
